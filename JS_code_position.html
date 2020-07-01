@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- JS 的 3 個 編 寫 位 置  -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+
+        <!--
+            可以將js code編寫到外部js文件中，然後通過 script標籤 引入
+
+            寫到外部文件中可以 在不同的頁面中同時引用
+            也可以 利用到瀏覽器的緩存機制
+            推薦使用此方式!!
+        -->
+        <script type="text/javascript" src="js/script.js"></script>
+          <!--
+              script標籤一旦用於引入外部文件了，就不能再編寫代碼了，即使編寫了瀏覽器也會忽略
+              如果需要則可以在創建一個新的script標籤用於內部代碼
+              如下:
+          -->
+        <!--
+            可以將js code編寫到 script標籤
+        -->
+        <script type="text/javascript">
+            alert("我是內部script標籤中的代碼!!");
+        </script>
+
+    </head>
+    <body>
+        <!--
+            可以將JS code編寫到標籤的 onclick屬性 中
+            當我們點擊按鈕時，JS code 才會執行
+
+            雖然可以寫在標籤的屬性中，但是他們屬於結構與行為耦合，不方便維護
+            故不推薦使用!
+        -->
+       <button onclick="alert('討厭，你點我幹嘛~~');">點我!</button>
+
+       <!--
+           可以將JS code 寫在超連結的 href屬性 中
+           當點擊超連結時，才會執行 JS code
+       -->
+       <a href="javascript:alert('點我啊~~');">也來點我下~</a>
+
+       <a href="javascript:;">也來點我下2~</a>
+    </body>
+</html>
